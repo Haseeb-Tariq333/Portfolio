@@ -10,68 +10,48 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <style>
-        /* Apply the Inter font family */
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Poppins', sans-serif;
+            background-color: #0a0a0a;
         }
 
-        /* Custom gradient text */
         .gradient-text {
-            background: linear-gradient(to right, #6366F1, #A855F7);
+            background: linear-gradient(to right, #818cf8, #c084fc);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            background-clip: text;
-            text-fill-color: transparent;
+        }
+        
+        .section-heading {
+            color: #f3f4f6;
         }
 
-        /* Simple scrollbar for a cleaner look (optional) */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: #111827;
-            /* gray-900 */
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: #4B5563;
-            /* gray-600 */
-            border-radius: 4px;
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background: #6B7280;
-            /* gray-500 */
-        }
     </style>
 </head>
 
-<body class="bg-gray-900 text-gray-100 antialiased">
+<body class="text-gray-200 antialiased">
 
-    <header class="fixed top-0 left-0 right-0 z-50 bg-gray-900 bg-opacity-80 backdrop-blur-md border-b border-gray-700">
-        <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <a href="#" class="text-2xl font-bold gradient-text hover:opacity-80 transition-opacity">
+    <header class="fixed top-0 left-0 right-0 z-50 bg-black bg-opacity-80 backdrop-blur-lg border-b border-gray-800">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="#" class="text-3xl font-bold gradient-text hover:opacity-90 transition-opacity">
                     Haseeb Tariq
                 </a>
-
-                <div class="hidden sm:flex sm:space-x-8">
+                <div class="hidden sm:flex sm:space-x-8 text-lg">
                     <a href="#about" class="text-gray-300 hover:text-white transition-colors">About</a>
                     <a href="#experience" class="text-gray-300 hover:text-white transition-colors">Experience</a>
                     <a href="#skills" class="text-gray-300 hover:text-white transition-colors">Skills</a>
                     <a href="#projects" class="text-gray-300 hover:text-white transition-colors">Projects</a>
                     <a href="#contact" class="text-gray-300 hover:text-white transition-colors">Contact</a>
                 </div>
-
                 <a href="resume.pdf" target="_blank"
-                    class="hidden sm:inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2 px-4 rounded-lg transition-colors">
+                    class="hidden sm:inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-lg text-lg transition-transform transform hover:scale-105">
                     View Resume
                 </a>
-
                 <div class="sm:hidden">
                     <a href="resume.pdf" target="_blank"
                         class="bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2 px-4 rounded-lg transition-colors text-sm">
@@ -82,97 +62,67 @@
         </nav>
     </header>
 
-    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-24">
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28">
 
-        <section id="hero"
-            class="flex flex-col md:flex-row items-center justify-between min-h-[calc(100vh-6rem)] py-12 md:py-20">
+        <section id="hero" class="flex flex-col md:flex-row items-center justify-between min-h-[calc(100vh-7rem)] py-12 md:py-20">
             <div class="md:w-3/5 text-center md:text-left mb-12 md:mb-0">
-                <span class="text-indigo-400 font-medium">Hi, my name is</span>
-                <h1 class="text-5xl sm:text-7xl font-bold text-white mt-2 mb-4">
+                <h1 class="text-6xl sm:text-8xl font-bold text-white leading-tight mb-4">
                     Haseeb Tariq
                 </h1>
-                <h2 class="text-3xl sm:text-5xl font-bold text-gray-400 mb-8">
-                    I turn ideas into smart digital experiences.
+                <h2 class="text-4xl sm:text-6xl font-bold gradient-text mb-8">
+                    Full Stack Developer
                 </h2>
-                <p class="text-lg text-gray-300 max-w-xl mx-auto md:mx-0 mb-8">
+                <p class="text-xl text-gray-400 max-w-2xl mx-auto md:mx-0 mb-10">
                     I'm a passionate <span class="text-indigo-400 font-semibold">Web Developer & AI Automation
-                        Builder</span> from Pakistan.
-                    I specialize in building modern SaaS platforms, AI-driven tools, and automated workflows that help
-                    businesses grow and scale effortlessly.
+                        Builder</span> from Pakistan, specializing in modern SaaS platforms and AI-driven tools.
                 </p>
-                <div class="flex justify-center md:justify-start space-x-4">
-                    <a href="www.linkedin.com/in/haseeb-tariq-0008a4311" target="_blank"
-                        class="text-gray-400 hover:text-indigo-400 transition-colors" aria-label="LinkedIn">
-                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                            <path
-                                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-                        </svg>
+                <div class="flex justify-center md:justify-start space-x-6">
+                    <a href="www.linkedin.com/in/haseeb-tariq-0008a4311" target="_blank" class="text-gray-400 hover:text-indigo-400 transition-colors" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin fa-3x"></i>
                     </a>
-                    <a href="https://github.com/Haseeb-Tariq333" target="_blank"
-                        class="text-gray-400 hover:text-indigo-400 transition-colors" aria-label="GitHub">
-                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                            <path fill-rule="evenodd"
-                                d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.165 6.839 9.489.5.09.682-.218.682-.484 0-.238-.009-.868-.013-1.703-2.782.602-3.369-1.34-3.369-1.34-.455-1.158-1.11-1.465-1.11-1.465-.909-.62.069-.608.069-.608 1.004.07 1.532 1.03 1.532 1.03.89 1.524 2.338 1.084 2.908.83.091-.645.349-1.084.635-1.334-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.03-2.682-.103-.253-.447-1.27.098-2.64 0 0 .84-.27 2.75 1.026.797-.22 1.653-.33 2.504-.335.851.004 1.707.115 2.505.335 1.909-1.296 2.748-1.026 2.748-1.026.546 1.37.202 2.387.099 2.64.64.698 1.028 1.59 1.028 2.682 0 3.842-2.337 4.687-4.565 4.935.359.309.678.92.678 1.852 0 1.334-.012 2.41-.012 2.736 0 .269.18.577.688.48C19.138 20.162 22 16.417 22 12c0-5.523-4.477-10-10-10z"
-                                clip-rule="evenodd" />
-                        </svg>
+                    <a href="https://github.com/Haseeb-Tariq333" target="_blank" class="text-gray-400 hover:text-indigo-400 transition-colors" aria-label="GitHub">
+                        <i class="fab fa-github fa-3x"></i>
                     </a>
-                    <a href="mailto:chaudhryhaseeb4116@gmail.com"
-                        class="text-gray-400 hover:text-indigo-400 transition-colors" aria-label="Email">
-                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                            <path
-                                d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6zm-2 0l-8 5-8-5h16zm0 12H4V8l8 5 8-5v10z" />
-                        </svg>
+                    <a href="mailto:chaudhryhaseeb4116@gmail.com" class="text-gray-400 hover:text-indigo-400 transition-colors" aria-label="Email">
+                        <i class="fas fa-envelope fa-3x"></i>
                     </a>
                 </div>
             </div>
-
             <div class="md:w-2/5 flex justify-center">
-                <img src="Profile.jpeg" alt="A professional headshot of [Your Name]"
-                    class="rounded-full w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 object-cover border-8 border-gray-800 shadow-2xl">
+                <img src="Profile.jpeg" alt="A professional headshot of Haseeb Tariq" class="rounded-full w-80 h-80 sm:w-96 sm:h-96 md:w-full md:h-full max-w-md object-cover border-8 border-gray-800 shadow-2xl">
             </div>
         </section>
 
         <section id="about" class="py-20 md:py-32">
-            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-4">About Me</h2>
-            <div class="w-20 h-1 bg-indigo-600 mx-auto mb-12 rounded-full"></div>
-
-            <div class="text-lg text-gray-300 space-y-6 max-w-3xl mx-auto">
+            <h2 class="text-4xl sm:text-5xl font-bold text-center mb-4 section-heading">About Me</h2>
+            <div class="w-24 h-1.5 bg-indigo-600 mx-auto mb-16 rounded-full"></div>
+            <div class="text-xl text-gray-300 space-y-8 max-w-4xl mx-auto text-center">
                 <p>
-                    Hey there! I'm <span class="text-white font-semibold">Haseeb Tariq</span>, a dedicated <span
-                        class="text-indigo-400 font-medium">Web Developer</span> and <span
-                        class="text-indigo-400 font-medium">AI Automation Enthusiast</span> currently pursuing a
-                    degree in Computer Science.
+                    Hey there! I'm <span class="text-white font-semibold">Haseeb Tariq</span>, a dedicated <span class="text-indigo-400 font-medium">Web Developer</span> and <span class="text-indigo-400 font-medium">AI Automation Enthusiast</span> currently pursuing a degree in Computer Science.
                 </p>
                 <p>
-                    I’m passionate about turning creative ideas into scalable digital products. I’ve worked on several SaaS and AI-powered projects — including an <span
-                        class="text-indigo-400 font-medium">AI-powered CMO platform</span> that helps businesses
-                    generate brandkits, content, and ads automatically. I’ve also explored workflow automation using
-                    <span class="text-indigo-400 font-medium">n8n</span> and built integrations with <span
-                        class="text-indigo-400 font-medium">Cloudflare, Next.js, and Stripe</span>.
+                    I’m passionate about turning creative ideas into scalable digital products. I’ve worked on several SaaS and AI-powered projects — including an <span class="text-indigo-400 font-medium">AI-powered CMO platform</span> that helps businesses generate brandkits, content, and ads automatically. I’ve also explored workflow automation using <span class="text-indigo-400 font-medium">n8n</span> and built integrations with <span class="text-indigo-400 font-medium">Cloudflare, Next.js, and Stripe</span>.
                 </p>
                 <p>
-                    My goal is to keep learning, innovating, and building tools that make businesses smarter and
-                    more efficient. When I’m not coding, you’ll probably find me exploring new tech ideas, reading
-                    about AI startups, or experimenting with design tools.
+                    My goal is to keep learning, innovating, and building tools that make businesses smarter and more efficient.
                 </p>
             </div>
         </section>
 
         <section id="experience" class="py-20 md:py-32">
-            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-4">Experience</h2>
-            <div class="w-20 h-1 bg-indigo-600 mx-auto mb-16 rounded-full"></div>
-
-            <div class="max-w-3xl mx-auto">
-                <div class="bg-gray-800 rounded-lg p-8 shadow-xl">
+            <h2 class="text-4xl sm:text-5xl font-bold text-center mb-4 section-heading">Experience</h2>
+            <div class="w-24 h-1.5 bg-indigo-600 mx-auto mb-16 rounded-full"></div>
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-gray-900 rounded-xl p-8 shadow-2xl border border-gray-800">
                     <div class="flex justify-between items-start">
                         <div>
-                            <h3 class="text-2xl font-bold text-white">Junior Solution Engineer</h3>
-                            <p class="text-indigo-400 font-medium text-lg">Sectem Technologies</p>
-                            <p class="text-gray-400 text-sm mt-1">On-site | Full-time</p>
+                            <h3 class="text-3xl font-bold text-white">Junior Solution Engineer</h3>
+                            <p class="text-indigo-400 font-medium text-xl mt-1">Sectem Technologies</p>
+                            <p class="text-gray-400 text-md mt-1">On-site | Full-time</p>
                         </div>
-                        <span class="text-gray-400 font-medium">Aug 2025 - Oct 2025</span>
+                        <span class="text-gray-400 font-medium text-lg">Aug 2025 - Oct 2025</span>
                     </div>
-                    <div class="mt-6 text-gray-300">
+                    <div class="mt-6 text-gray-300 text-lg">
                         <p>
                             As the team lead, I led the development of <span class="font-semibold text-white">AI-CMO</span>, an innovative SaaS product. My primary role involved architecting and building the platform, focusing on creating a scalable and efficient solution for our clients. I was deeply involved in both the technical and strategic aspects of the project, ensuring that our team delivered a high-quality product that met the market's needs.
                         </p>
@@ -182,193 +132,116 @@
         </section>
 
         <section id="skills" class="py-20 md:py-32">
-            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-4">My Skills</h2>
-            <div class="w-20 h-1 bg-indigo-600 mx-auto mb-16 rounded-full"></div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
-                    <h3 class="text-xl font-bold text-white mb-4">Frontend Development</h3>
-                    <div class="flex flex-wrap gap-3">
-                        <span class="bg-gray-700 text-indigo-300 py-2 px-4 rounded-lg font-medium">JavaScript</span>
-                        <span class="bg-gray-700 text-indigo-300 py-2 px-4 rounded-lg font-medium">React.js</span>
-                        <span class="bg-gray-700 text-indigo-300 py-2 px-4 rounded-lg font-medium">Next.js</span>
-                        <span class="bg-gray-700 text-indigo-300 py-2 px-4 rounded-lg font-medium">TypeScript</span>
-                        <span class="bg-gray-700 text-indigo-300 py-2 px-4 rounded-lg font-medium">HTML</span>
-                        <span class="bg-gray-700 text-indigo-300 py-2 px-4 rounded-lg font-medium">CSS</span>
-                        <span class="bg-gray-700 text-indigo-300 py-2 px-4 rounded-lg font-medium">Tailwind CSS</span>
+            <h2 class="text-4xl sm:text-5xl font-bold text-center mb-4 section-heading">My Skills</h2>
+            <div class="w-24 h-1.5 bg-indigo-600 mx-auto mb-16 rounded-full"></div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl mx-auto">
+                <div class="bg-gray-900 p-8 rounded-lg shadow-lg border border-gray-800 transition-transform transform hover:scale-105 hover:border-indigo-500">
+                    <h3 class="text-2xl font-bold text-white mb-4">Frontend Development</h3>
+                    <div class="flex flex-wrap gap-4">
+                        <span class="bg-gray-800 text-indigo-300 py-2 px-4 rounded-lg font-medium text-lg">JavaScript</span>
+                        <span class="bg-gray-800 text-indigo-300 py-2 px-4 rounded-lg font-medium text-lg">React.js</span>
+                        <span class="bg-gray-800 text-indigo-300 py-2 px-4 rounded-lg font-medium text-lg">Next.js</span>
+                        <span class="bg-gray-800 text-indigo-300 py-2 px-4 rounded-lg font-medium text-lg">TypeScript</span>
+                        <span class="bg-gray-800 text-indigo-300 py-2 px-4 rounded-lg font-medium text-lg">HTML</span>
+                        <span class="bg-gray-800 text-indigo-300 py-2 px-4 rounded-lg font-medium text-lg">CSS</span>
+                        <span class="bg-gray-800 text-indigo-300 py-2 px-4 rounded-lg font-medium text-lg">Tailwind CSS</span>
                     </div>
                 </div>
-
-                <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
-                    <h3 class="text-xl font-bold text-white mb-4">Backend & Databases</h3>
-                    <div class="flex flex-wrap gap-3">
-                        <span class="bg-gray-700 text-indigo-300 py-2 px-4 rounded-lg font-medium">Node.js</span>
-                        <span class="bg-gray-700 text-indigo-300 py-2 px-4 rounded-lg font-medium">Java</span>
-                        <span class="bg-gray-700 text-indigo-300 py-2 px-4 rounded-lg font-medium">C++</span>
-                        <span class="bg-gray-700 text-indigo-300 py-2 px-4 rounded-lg font-medium">Databases</span>
+                <div class="bg-gray-900 p-8 rounded-lg shadow-lg border border-gray-800 transition-transform transform hover:scale-105 hover:border-indigo-500">
+                    <h3 class="text-2xl font-bold text-white mb-4">Backend & Databases</h3>
+                    <div class="flex flex-wrap gap-4">
+                        <span class="bg-gray-800 text-indigo-300 py-2 px-4 rounded-lg font-medium text-lg">Node.js</span>
+                        <span class="bg-gray-800 text-indigo-300 py-2 px-4 rounded-lg font-medium text-lg">Java</span>
+                        <span class="bg-gray-800 text-indigo-300 py-2 px-4 rounded-lg font-medium text-lg">C++</span>
+                        <span class="bg-gray-800 text-indigo-300 py-2 px-4 rounded-lg font-medium text-lg">Databases</span>
                     </div>
                 </div>
-
-                <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
-                    <h3 class="text-xl font-bold text-white mb-4">Tools & Platforms</h3>
-                    <div class="flex flex-wrap gap-3">
-                        <span class="bg-gray-700 text-indigo-300 py-2 px-4 rounded-lg font-medium">n8n AI Automation</span>
-                        <span class="bg-gray-700 text-indigo-300 py-2 px-4 rounded-lg font-medium">Cloudflare</span>
-                        <span class="bg-gray-700 text-indigo-300 py-2 px-4 rounded-lg font-medium">Vercel</span>
-                        <span class="bg-gray-700 text-indigo-300 py-2 px-4 rounded-lg font-medium">Git & GitHub</span>
+                <div class="bg-gray-900 p-8 rounded-lg shadow-lg border border-gray-800 transition-transform transform hover:scale-105 hover:border-indigo-500">
+                    <h3 class="text-2xl font-bold text-white mb-4">Tools & Platforms</h3>
+                    <div class="flex flex-wrap gap-4">
+                        <span class="bg-gray-800 text-indigo-300 py-2 px-4 rounded-lg font-medium text-lg">n8n AI Automation</span>
+                        <span class="bg-gray-800 text-indigo-300 py-2 px-4 rounded-lg font-medium text-lg">Cloudflare</span>
+                        <span class="bg-gray-800 text-indigo-300 py-2 px-4 rounded-lg font-medium text-lg">Vercel</span>
+                        <span class="bg-gray-800 text-indigo-300 py-2 px-4 rounded-lg font-medium text-lg">Git & GitHub</span>
                     </div>
                 </div>
             </div>
         </section>
 
         <section id="projects" class="py-20 md:py-32">
-            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-4">Featured Projects</h2>
-            <div class="w-20 h-1 bg-indigo-600 mx-auto mb-16 rounded-full"></div>
-
+            <h2 class="text-4xl sm:text-5xl font-bold text-center mb-4 section-heading">Featured Projects</h2>
+            <div class="w-24 h-1.5 bg-indigo-600 mx-auto mb-16 rounded-full"></div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-
-                <div
-                    class="bg-gray-800 rounded-lg overflow-hidden shadow-xl hover:shadow-indigo-500/20 transition-all duration-300 ease-in-out transform hover:-translate-y-1">
-                    <img src="https://placehold.co/600x400/1F2937/FFFFFF?text=Project+1+Screenshot"
-                        alt="Screenshot of Project 1" class="w-full h-56 object-cover">
+                <div class="bg-gray-900 rounded-lg overflow-hidden shadow-xl border border-gray-800 hover:border-indigo-500 transition-all duration-300 ease-in-out transform hover:-translate-y-2">
+                    <img src="DentalVoice.jpg" alt="Screenshot of AI Voice Dental Assistant" class="w-full h-64 object-cover">
                     <div class="p-6">
-                        <h3 class="text-2xl font-semibold text-white mb-3">[Project 1 Title]</h3>
-                        <p class="text-gray-300 mb-4">
-                            A brief 2-3 sentence description of your project. What problem does it solve? What does it
-                            do?
-                        </p>
+                        <h3 class="text-2xl font-semibold text-white mb-3">AI Voice Dental Assistant</h3>
+                        <p class="text-gray-400 mb-4">A full-stack dental platform with multi-dentist appointment booking and a voice AI agent for instant information.</p>
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="text-sm bg-indigo-900 text-indigo-200 py-1 px-3 rounded-full">React.js</span>
-                            <span class="text-sm bg-indigo-900 text-indigo-200 py-1 px-3 rounded-full">Node.js</span>
                             <span class="text-sm bg-indigo-900 text-indigo-200 py-1 px-3 rounded-full">Next.js</span>
-                            <span class="text-sm bg-indigo-900 text-indigo-200 py-1 px-3 rounded-full">TypeScript</span>
-                            <span class="text-sm bg-indigo-900 text-indigo-200 py-1 px-3 rounded-full">Tailwind
-                                CSS</span>
-                        </div>
-                        <div class="flex space-x-4">
-                            <a href="[LIVE_DEMO_URL]" target="_blank"
-                                class="text-indigo-400 hover:text-indigo-300 font-medium transition-colors flex items-center">
-                                Live Demo
-                                <svg class="w-4 h-4 ml-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14">
-                                    </path>
-                                </svg>
-                            </a>
-                            <a href="[GITHUB_REPO_URL]" target="_blank"
-                                class="text-indigo-400 hover:text-indigo-300 font-medium transition-colors flex items-center">
-                                GitHub
-                                <svg class="w-4 h-4 ml-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14">
-                                    </path>
-                                </svg>
-                            </a>
+                            <span class="text-sm bg-indigo-900 text-indigo-200 py-1 px-3 rounded-full">Vapi AI</span>
+                            <span class="text-sm bg-indigo-900 text-indigo-200 py-1 px-3 rounded-full">Clerk Auth</span>
                         </div>
                     </div>
                 </div>
-
-                <div
-                    class="bg-gray-800 rounded-lg overflow-hidden shadow-xl hover:shadow-indigo-500/20 transition-all duration-300 ease-in-out transform hover:-translate-y-1">
-                    <img src="https://placehold.co/600x400/1F2937/FFFFFF?text=Project+2+Screenshot"
-                        alt="Screenshot of Project 2" class="w-full h-56 object-cover">
+                <div class="bg-gray-900 rounded-lg overflow-hidden shadow-xl border border-gray-800 hover:border-indigo-500 transition-all duration-300 ease-in-out transform hover:-translate-y-2">
+                    <img src="KidsStory.jpg" alt="Screenshot of AI-Kids Story Generator" class="w-full h-64 object-cover">
                     <div class="p-6">
-                        <h3 class="text-2xl font-semibold text-white mb-3">[Project 2 Title]</h3>
-                        <p class="text-gray-300 mb-4">
-                            Another project description. This one might focus on a different skillset, like a complex
-                            backend or a beautiful UI.
-                        </p>
+                        <h3 class="text-2xl font-semibold text-white mb-3">AI-Kids Story Generator</h3>
+                        <p class="text-gray-400 mb-4">Generates children's stories using an AI API in the backend with user authentication and databases to keep track of users.</p>
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="text-sm bg-indigo-900 text-indigo-200 py-1 px-3 rounded-full">Python
-                                (Django)</span>
-                            <span class="text-sm bg-indigo-900 text-indigo-200 py-1 px-3 rounded-full">JavaScript</span>
-                            <span class="text-sm bg-indigo-900 text-indigo-200 py-1 px-3 rounded-full">PostgreSQL</span>
-                        </div>
-                        <div class="flex space-x-4">
-                            <a href="[LIVE_DEMO_URL]" target="_blank"
-                                class="text-indigo-400 hover:text-indigo-300 font-medium transition-colors flex items-center">
-                                Live Demo
-                                <svg class="w-4 h-4 ml-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14">
-                                    </path>
-                                </svg>
-                            </a>
-                            <a href="[GITHUB_REPO_URL]" target="_blank"
-                                class="text-indigo-400 hover:text-indigo-300 font-medium transition-colors flex items-center">
-                                GitHub
-                                <svg class="w-4 h-4 ml-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14">
-                                    </path>
-                                </svg>
-                            </a>
+                            <span class="text-sm bg-indigo-900 text-indigo-200 py-1 px-3 rounded-full">Next.js</span>
+                            <span class="text-sm bg-indigo-900 text-indigo-200 py-1 px-3 rounded-full">AI API</span>
+                            <span class="text-sm bg-indigo-900 text-indigo-200 py-1 px-3 rounded-full">Clerk Auth</span>
                         </div>
                     </div>
                 </div>
-
-                <div
-                    class="bg-gray-800 rounded-lg overflow-hidden shadow-xl hover:shadow-indigo-500/20 transition-all duration-300 ease-in-out transform hover:-translate-y-1">
-                    <img src="https://placehold.co/600x400/1F2937/FFFFFF?text=Project+3+Screenshot"
-                        alt="Screenshot of Project 3" class="w-full h-56 object-cover">
+                <div class="bg-gray-900 rounded-lg overflow-hidden shadow-xl border border-gray-800 hover:border-indigo-500 transition-all duration-300 ease-in-out transform hover:-translate-y-2">
+                    <img src="https://placehold.co/600x400/101010/FFFFFF?text=AI+CMO" alt="Screenshot of AI CMO" class="w-full h-64 object-cover">
                     <div class="p-6">
-                        <h3 class="text-2xl font-semibold text-white mb-3">[Project 3 Title]</h3>
-                        <p class="text-gray-300 mb-4">
-                            A third project. Maybe this one is a UI/UX design from Figma, or a mobile app, or a data
-                            visualization.
-                        </p>
+                        <h3 class="text-2xl font-semibold text-white mb-3">AI CMO</h3>
+                        <p class="text-gray-400 mb-4">An AI-powered SaaS platform that automates brandkit generation, web scraping, and blog post generation for brands.</p>
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="text-sm bg-indigo-900 text-indigo-200 py-1 px-3 rounded-full">Figma</span>
-                            <span class="text-sm bg-indigo-900 text-indigo-200 py-1 px-3 rounded-full">UI/UX
-                                Design</span>
-                            <span
-                                class="text-sm bg-indigo-900 text-indigo-200 py-1 px-3 rounded-full">Wireframing</span>
+                            <span class="text-sm bg-indigo-900 text-indigo-200 py-1 px-3 rounded-full">Next.js</span>
+                            <span class="text-sm bg-indigo-900 text-indigo-200 py-1 px-3 rounded-full">Cloudflare D1</span>
+                            <span class="text-sm bg-indigo-900 text-indigo-200 py-1 px-3 rounded-full">Web Scraping</span>
                         </div>
-                        <div class="flex space-x-4">
-                            <a href="[LIVE_DEMO_URL]" target="_blank"
-                                class="text-indigo-400 hover:text-indigo-300 font-medium transition-colors flex items-center">
-                                View Design
-                                <svg class="w-4 h-4 ml-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14">
-                                    </path>
-                                </svg>
-                            </a>
-                            </div>
                     </div>
                 </div>
-
             </div>
         </section>
 
         <section id="contact" class="py-20 md:py-32">
-            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-4">Get In Touch</h2>
-            <div class="w-20 h-1 bg-indigo-600 mx-auto mb-16 rounded-full"></div>
-
-            <div class="max-w-2xl mx-auto text-center">
-                <p class="text-lg text-gray-300 mb-8">
-                    I'm currently open to new opportunities and my inbox is always open. Whether you have a question or
-                    just want to say hi, I'll do my best to get back to you!
+            <h2 class="text-4xl sm:text-5xl font-bold text-center mb-4 section-heading">Get In Touch</h2>
+            <div class="w-24 h-1.5 bg-indigo-600 mx-auto mb-16 rounded-full"></div>
+            <div class="max-w-3xl mx-auto text-center">
+                <p class="text-xl text-gray-300 mb-8">
+                    I'm currently open to new opportunities. Whether you have a question or just want to say hi, my inbox is always open.
                 </p>
-
-                <a href="mailto:[YOUR_EMAIL@example.com]"
-                    class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-3 px-8 rounded-lg text-lg transition-colors">
-                    Say Hello
-                </a>
+                <div class="flex flex-col sm:flex-row items-center justify-center space-y-6 sm:space-y-0 sm:space-x-8 text-xl">
+                    <div class="flex items-center space-x-3">
+                        <i class="fas fa-envelope text-indigo-400"></i>
+                        <a href="mailto:chaudhryhaseeb4116@gmail.com" class="text-gray-300 hover:text-white">chaudhryhaseeb4116@gmail.com</a>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <i class="fas fa-phone text-indigo-400"></i>
+                        <span class="text-gray-300">0370-5469029</span>
+                    </div>
+                </div>
+                <div class="mt-12">
+                     <a href="mailto:chaudhryhaseeb4116@gmail.com" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-8 rounded-lg text-xl transition-transform transform hover:scale-105">
+                        Say Hello
+                    </a>
+                </div>
             </div>
         </section>
 
     </main>
 
-    <footer class="border-t border-gray-700 mt-20">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-center text-gray-400">
-            <p>&copy; 2025 [Your Name]. All rights reserved.</p>
-            <p class="text-sm mt-1">Built with HTML, Tailwind CSS, and a dash of coffee.</p>
+    <footer class="border-t border-gray-800 mt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 text-center text-gray-500">
+            <p>&copy; 2025 Haseeb Tariq. All rights reserved.</p>
+            <p class="text-sm mt-2">Built with HTML, Tailwind CSS, and a passion for code.</p>
         </div>
     </footer>
 
@@ -376,16 +249,12 @@
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-
                 const targetId = this.getAttribute('href');
                 const targetElement = document.querySelector(targetId);
-
                 if (targetElement) {
-                    // Calculate offset for fixed header
-                    const headerOffset = 64; // 4rem or 16 * 4
+                    const headerOffset = 80;
                     const elementPosition = targetElement.getBoundingClientRect().top;
                     const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
                     window.scrollTo({
                         top: offsetPosition,
                         behavior: 'smooth'
