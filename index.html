@@ -6,13 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Haseeb Tariq | Full Stack Developer</title>
 
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 
+    <!-- Google Fonts (Poppins) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" xintegrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
     <style>
         body {
@@ -30,11 +36,16 @@
             color: #f3f4f6;
         }
 
+        /* Custom styles for the form message */
+        #form-message {
+            transition: all 0.3s ease-in-out;
+        }
     </style>
 </head>
 
 <body class="text-gray-200 antialiased">
 
+    <!-- Header & Navigation -->
     <header class="fixed top-0 left-0 right-0 z-50 bg-black bg-opacity-80 backdrop-blur-lg border-b border-gray-800">
         <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
@@ -62,8 +73,10 @@
         </nav>
     </header>
 
+    <!-- Main Content -->
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28">
 
+        <!-- Hero Section -->
         <section id="hero" class="flex flex-col md:flex-row items-center justify-between min-h-[calc(100vh-7rem)] py-12 md:py-20">
             <div class="md:w-3/5 text-center md:text-left mb-12 md:mb-0">
                 <h1 class="text-6xl sm:text-8xl font-bold text-white leading-tight mb-4">
@@ -93,6 +106,7 @@
             </div>
         </section>
 
+        <!-- About Me Section -->
         <section id="about" class="py-20 md:py-32">
             <h2 class="text-4xl sm:text-5xl font-bold text-center mb-4 section-heading">About Me</h2>
             <div class="w-24 h-1.5 bg-indigo-600 mx-auto mb-16 rounded-full"></div>
@@ -109,6 +123,7 @@
             </div>
         </section>
 
+        <!-- Experience Section -->
         <section id="experience" class="py-20 md:py-32">
             <h2 class="text-4xl sm:text-5xl font-bold text-center mb-4 section-heading">Experience</h2>
             <div class="w-24 h-1.5 bg-indigo-600 mx-auto mb-16 rounded-full"></div>
@@ -131,6 +146,7 @@
             </div>
         </section>
 
+        <!-- My Skills Section -->
         <section id="skills" class="py-20 md:py-32">
             <h2 class="text-4xl sm:text-5xl font-bold text-center mb-4 section-heading">My Skills</h2>
             <div class="w-24 h-1.5 bg-indigo-600 mx-auto mb-16 rounded-full"></div>
@@ -168,6 +184,7 @@
             </div>
         </section>
 
+        <!-- Projects Section -->
         <section id="projects" class="py-20 md:py-32">
             <h2 class="text-4xl sm:text-5xl font-bold text-center mb-4 section-heading">Featured Projects</h2>
             <div class="w-24 h-1.5 bg-indigo-600 mx-auto mb-16 rounded-full"></div>
@@ -211,33 +228,70 @@
             </div>
         </section>
 
+        <!-- Contact Section -->
         <section id="contact" class="py-20 md:py-32">
             <h2 class="text-4xl sm:text-5xl font-bold text-center mb-4 section-heading">Get In Touch</h2>
             <div class="w-24 h-1.5 bg-indigo-600 mx-auto mb-16 rounded-full"></div>
-            <div class="max-w-3xl mx-auto text-center">
-                <p class="text-xl text-gray-300 mb-8">
-                    I'm currently open to new opportunities. Whether you have a question or just want to say hi, my inbox is always open.
-                </p>
-                <div class="flex flex-col sm:flex-row items-center justify-center space-y-6 sm:space-y-0 sm:space-x-8 text-xl">
-                    <div class="flex items-center space-x-3">
-                        <i class="fas fa-envelope text-indigo-400"></i>
-                        <a href="mailto:chaudhryhaseeb4116@gmail.com" class="text-gray-300 hover:text-white">chaudhryhaseeb4116@gmail.com</a>
+            
+            <div class="max-w-3xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
+                <!-- Contact Info -->
+                <div class="flex flex-col justify-center space-y-8">
+                    <div>
+                        <h3 class="text-3xl font-bold text-white mb-4">Let's Talk!</h3>
+                        <p class="text-lg text-gray-400">
+                            I'm open to new opportunities and collaborations. Feel free to send me a message or contact me directly.
+                        </p>
                     </div>
-                    <div class="flex items-center space-x-3">
-                        <i class="fas fa-phone text-indigo-400"></i>
-                        <span class="text-gray-300">0370-5469029</span>
+                    <div class="space-y-6 text-lg">
+                        <div class="flex items-center space-x-4">
+                            <i class="fas fa-envelope text-indigo-400 fa-lg"></i>
+                            <a href="mailto:chaudhryhaseeb4116@gmail.com" class="text-gray-300 hover:text-white">chaudhryhaseeb4116@gmail.com</a>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <i class="fas fa-phone text-indigo-400 fa-lg"></i>
+                            <span class="text-gray-300">0370-5469029</span>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <i class="fas fa-map-marker-alt text-indigo-400 fa-lg"></i>
+                            <span class="text-gray-300">Islamabad, Pakistan</span>
+                        </div>
                     </div>
                 </div>
-                <div class="mt-12">
-                     <a href="mailto:chaudhryhaseeb4116@gmail.com" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-8 rounded-lg text-xl transition-transform transform hover:scale-105">
-                        Say Hello
-                    </a>
+
+                <!-- Contact Form -->
+                <div class="bg-gray-900 p-8 rounded-lg shadow-2xl border border-gray-800">
+                    <form id="contact-form" class="space-y-6">
+                        <div>
+                            <label for="from_name" class="block text-sm font-medium text-gray-300 mb-2">Your Name</label>
+                            <input type="text" name="from_name" id="from_name" required
+                                class="w-full bg-gray-800 border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                        </div>
+                        <div>
+                            <label for="from_email" class="block text-sm font-medium text-gray-300 mb-2">Your Email</label>
+                            <input type="email" name="from_email" id="from_email" required
+                                class="w-full bg-gray-800 border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-300 mb-2">Message</label>
+                            <textarea name="message" id="message" rows="5" required
+                                class="w-full bg-gray-800 border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
+                        </div>
+                        <div>
+                            <button type="submit" id="submit-button"
+                                class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-lg text-lg transition-transform transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed">
+                                Send Message
+                            </button>
+                        </div>
+                        <!-- Form message for success/error -->
+                        <div id="form-message" class="text-center text-sm font-medium"></div>
+                    </form>
                 </div>
             </div>
         </section>
 
     </main>
 
+    <!-- Footer -->
     <footer class="border-t border-gray-800 mt-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 text-center text-gray-500">
             <p>&copy; 2025 Haseeb Tariq. All rights reserved.</p>
@@ -245,14 +299,16 @@
         </div>
     </footer>
 
+    <!-- JavaScript for smooth scrolling and contact form -->
     <script>
+        // Smooth Scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 const targetId = this.getAttribute('href');
                 const targetElement = document.querySelector(targetId);
                 if (targetElement) {
-                    const headerOffset = 80;
+                    const headerOffset = 80; // 5rem
                     const elementPosition = targetElement.getBoundingClientRect().top;
                     const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
                     window.scrollTo({
@@ -261,6 +317,48 @@
                     });
                 }
             });
+        });
+
+        // EmailJS Contact Form
+        (function() {
+            // IMPORTANT: Replace with your own EmailJS Public Key
+            emailjs.init({
+              publicKey: "J6Af2-gFjKNUcrta4", 
+            });
+        })();
+
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const form = this;
+            const submitButton = document.getElementById('submit-button');
+            const formMessage = document.getElementById('form-message');
+
+            // Change button text and disable it
+            submitButton.disabled = true;
+            submitButton.textContent = 'Sending...';
+
+            // --- IMPORTANT ---
+            // Replace 'YOUR_SERVICE_ID' and 'YOUR_TEMPLATE_ID' with your EmailJS IDs
+            const serviceID = 'service_3ehdcn6';
+            const templateID = 'template_mrwomjr';
+
+            emailjs.sendForm(serviceID, templateID, form)
+                .then(() => {
+                    // Success
+                    formMessage.textContent = 'Message sent successfully!';
+                    formMessage.className = 'text-green-400';
+                    submitButton.disabled = false;
+                    submitButton.textContent = 'Send Message';
+                    form.reset(); // Clear the form
+                }, (err) => {
+                    // Error
+                    console.error('EmailJS Error:', err);
+                    formMessage.textContent = 'Failed to send message. Please try again.';
+                    formMessage.className = 'text-red-400';
+                    submitButton.disabled = false;
+                    submitButton.textContent = 'Send Message';
+                });
         });
     </script>
 
