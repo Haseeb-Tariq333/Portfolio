@@ -6,6 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Haseeb Tariq | Full Stack Developer</title>
 
+    <!-- 
+      RECOMMENDATION 4: SEO & Social Media Meta Tags
+      These tags help with search engine ranking and how your
+      portfolio looks when shared on sites like LinkedIn or Twitter.
+    -->
+    <meta name="description" content="Haseeb Tariq's portfolio - a passionate Web Developer & AI Automation Builder specializing in SaaS and AI-driven applications.">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://your-domain.com/"> <!-- TODO: Replace with your actual domain -->
+    <meta property="og:title" content="Haseeb Tariq | Full Stack Developer">
+    <meta property="og:description" content="Portfolio of Haseeb Tariq, specializing in SaaS and AI-driven applications.">
+    <meta property="og:image" content="https://your-domain.com/Profile.jpeg"> <!-- TODO: Replace with full URL to your profile image -->
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://your-domain.com/"> <!-- TODO: Replace with your actual domain -->
+    <meta property="twitter:title" content="Haseeb Tariq | Full Stack Developer">
+    <meta property="twitter:description" content="Portfolio of Haseeb Tariq, specializing in SaaS and AI-driven applications.">
+    <meta property="twitter:image" content="https://your-domain.com/Profile.jpeg"> <!-- TODO: Replace with full URL to your profile image -->
+
+    <!-- 
+      RECOMMENDATION 4: Favicon
+      This is the little icon in the browser tab.
+      TODO: Create a favicon.png (e.g., 32x32) and place it in your root folder.
+    -->
+    <link rel="icon" type="image/png" href="favicon.png">
+
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -17,8 +43,24 @@
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" xintegrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <!-- 
+      RECOMMENDATION 3: Devicon for Skill Icons
+    -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+
+    <!-- 
+      RECOMMENDATION 1: AOS (Animate On Scroll) Library
+    -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
     <!-- EmailJS SDK -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <!-- 
+      RECOMMENDATION 1: Typed.js Library
+    -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 
     <style>
         body {
@@ -40,6 +82,23 @@
         #form-message {
             transition: all 0.3s ease-in-out;
         }
+
+        /* Style for the skill tags with icons */
+        .skill-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem; /* 12px */
+            background-color: #1f2937; /* gray-800 */
+            color: #c7d2fe; /* indigo-200 */
+            padding: 0.5rem 1rem; /* py-2 px-4 */
+            border-radius: 0.5rem; /* rounded-lg */
+            font-weight: 500; /* font-medium */
+            font-size: 1.125rem; /* text-lg */
+        }
+        .skill-tag i {
+            font-size: 1.5rem; /* 24px */
+        }
+
     </style>
 </head>
 
@@ -79,17 +138,20 @@
         <!-- Hero Section -->
         <section id="hero" class="flex flex-col md:flex-row items-center justify-between min-h-[calc(100vh-7rem)] py-12 md:py-20">
             <div class="md:w-3/5 text-center md:text-left mb-12 md:mb-0">
-                <h1 class="text-6xl sm:text-8xl font-bold text-white leading-tight mb-4">
+                <h1 class="text-6xl sm:text-8xl font-bold text-white leading-tight mb-4" data-aos="fade-right">
                     Haseeb Tariq
                 </h1>
-                <h2 class="text-4xl sm:text-6xl font-bold gradient-text mb-8">
-                    Full Stack Developer
+                
+                <!-- RECOMMENDATION 1: Typed.js Target -->
+                <h2 class="text-4xl sm:text-6xl font-bold gradient-text mb-8" data-aos="fade-right" data-aos-delay="200">
+                    I build <span id="typed-text"></span>
                 </h2>
-                <p class="text-xl text-gray-400 max-w-2xl mx-auto md:mx-0 mb-10">
+                
+                <p class="text-xl text-gray-400 max-w-2xl mx-auto md:mx-0 mb-10" data-aos="fade-right" data-aos-delay="400">
                     I'm a passionate <span class="text-indigo-400 font-semibold">Web Developer & AI Automation
                         Builder</span> from Pakistan, specializing in modern SaaS platforms and AI-driven tools.
                 </p>
-                <div class="flex justify-center md:justify-start space-x-6">
+                <div class="flex justify-center md:justify-start space-x-6" data-aos="fade-right" data-aos-delay="600">
                     <a href="www.linkedin.com/in/haseeb-tariq-0008a4311" target="_blank" class="text-gray-400 hover:text-indigo-400 transition-colors" aria-label="LinkedIn">
                         <i class="fab fa-linkedin fa-3x"></i>
                     </a>
@@ -101,13 +163,13 @@
                     </a>
                 </div>
             </div>
-            <div class="md:w-2/5 flex justify-center">
+            <div class="md:w-2/5 flex justify-center" data-aos="fade-left" data-aos-delay="300">
                 <img src="Profile.jpeg" alt="A professional headshot of Haseeb Tariq" class="rounded-full w-80 h-80 sm:w-96 sm:h-96 md:w-full md:h-full max-w-md object-cover border-8 border-gray-800 shadow-2xl">
             </div>
         </section>
 
         <!-- About Me Section -->
-        <section id="about" class="py-20 md:py-32">
+        <section id="about" class="py-20 md:py-32" data-aos="fade-up">
             <h2 class="text-4xl sm:text-5xl font-bold text-center mb-4 section-heading">About Me</h2>
             <div class="w-24 h-1.5 bg-indigo-600 mx-auto mb-16 rounded-full"></div>
             <div class="text-xl text-gray-300 space-y-8 max-w-4xl mx-auto text-center">
@@ -124,7 +186,7 @@
         </section>
 
         <!-- Experience Section -->
-        <section id="experience" class="py-20 md:py-32">
+        <section id="experience" class="py-20 md:py-32" data-aos="fade-up">
             <h2 class="text-4xl sm:text-5xl font-bold text-center mb-4 section-heading">Experience</h2>
             <div class="w-24 h-1.5 bg-indigo-600 mx-auto mb-16 rounded-full"></div>
             <div class="max-w-4xl mx-auto">
@@ -147,89 +209,134 @@
         </section>
 
         <!-- My Skills Section -->
-        <section id="skills" class="py-20 md:py-32">
+        <section id="skills" class="py-20 md:py-32" data-aos="fade-up">
             <h2 class="text-4xl sm:text-5xl font-bold text-center mb-4 section-heading">My Skills</h2>
             <div class="w-24 h-1.5 bg-indigo-600 mx-auto mb-16 rounded-full"></div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl mx-auto">
+                
+                <!-- RECOMMENDATION 3: Upgraded Skill Cards with Icons -->
                 <div class="bg-gray-900 p-8 rounded-lg shadow-lg border border-gray-800 transition-transform transform hover:scale-105 hover:border-indigo-500">
-                    <h3 class="text-2xl font-bold text-white mb-4">Frontend Development</h3>
+                    <h3 class="text-2xl font-bold text-white mb-6">Frontend Development</h3>
                     <div class="flex flex-wrap gap-4">
-                        <span class="bg-gray-800 text-indigo-300 py-2 px-4 rounded-lg font-medium text-lg">JavaScript</span>
-                        <span class="bg-gray-800 text-indigo-300 py-2 px-4 rounded-lg font-medium text-lg">React.js</span>
-                        <span class="bg-gray-800 text-indigo-300 py-2 px-4 rounded-lg font-medium text-lg">Next.js</span>
-                        <span class="bg-gray-800 text-indigo-300 py-2 px-4 rounded-lg font-medium text-lg">TypeScript</span>
-                        <span class="bg-gray-800 text-indigo-300 py-2 px-4 rounded-lg font-medium text-lg">HTML</span>
-                        <span class="bg-gray-800 text-indigo-300 py-2 px-4 rounded-lg font-medium text-lg">CSS</span>
-                        <span class="bg-gray-800 text-indigo-300 py-2 px-4 rounded-lg font-medium text-lg">Tailwind CSS</span>
+                        <span class="skill-tag"><i class="devicon-javascript-plain text-yellow-300"></i> JavaScript</span>
+                        <span class="skill-tag"><i class="devicon-react-original text-blue-400"></i> React.js</span>
+                        <span class="skill-tag"><i class="devicon-nextjs-original text-white"></i> Next.js</span>
+                        <span class="skill-tag"><i class="devicon-typescript-plain text-blue-500"></i> TypeScript</span>
+                        <span class="skill-tag"><i class="devicon-html5-plain text-orange-500"></i> HTML</span>
+                        <span class="skill-tag"><i class="devicon-css3-plain text-blue-500"></i> CSS</span>
+                        <span class="skill-tag"><i class="devicon-tailwindcss-plain text-cyan-400"></i> Tailwind CSS</span>
                     </div>
                 </div>
                 <div class="bg-gray-900 p-8 rounded-lg shadow-lg border border-gray-800 transition-transform transform hover:scale-105 hover:border-indigo-500">
-                    <h3 class="text-2xl font-bold text-white mb-4">Backend & Databases</h3>
+                    <h3 class="text-2xl font-bold text-white mb-6">Backend & Databases</h3>
                     <div class="flex flex-wrap gap-4">
-                        <span class="bg-gray-800 text-indigo-300 py-2 px-4 rounded-lg font-medium text-lg">Node.js</span>
-                        <span class="bg-gray-800 text-indigo-300 py-2 px-4 rounded-lg font-medium text-lg">Java</span>
-                        <span class="bg-gray-800 text-indigo-300 py-2 px-4 rounded-lg font-medium text-lg">C++</span>
-                        <span class="bg-gray-800 text-indigo-300 py-2 px-4 rounded-lg font-medium text-lg">Databases</span>
+                        <span class="skill-tag"><i class="devicon-nodejs-plain text-green-500"></i> Node.js</span>
+                        <span class="skill-tag"><i class="devicon-java-plain text-orange-400"></i> Java</span>
+                        <span class="skill-tag"><i class="devicon-cplusplus-plain text-blue-600"></i> C++</span>
+                        <span class="skill-tag"><i class="fas fa-database text-indigo-300"></i> Databases</span>
                     </div>
                 </div>
                 <div class="bg-gray-900 p-8 rounded-lg shadow-lg border border-gray-800 transition-transform transform hover:scale-105 hover:border-indigo-500">
-                    <h3 class="text-2xl font-bold text-white mb-4">Tools & Platforms</h3>
+                    <h3 class="text-2xl font-bold text-white mb-6">Tools & Platforms</h3>
                     <div class="flex flex-wrap gap-4">
-                        <span class="bg-gray-800 text-indigo-300 py-2 px-4 rounded-lg font-medium text-lg">n8n AI Automation</span>
-                        <span class="bg-gray-800 text-indigo-300 py-2 px-4 rounded-lg font-medium text-lg">Cloudflare</span>
-                        <span class="bg-gray-800 text-indigo-300 py-2 px-4 rounded-lg font-medium text-lg">Vercel</span>
-                        <span class="bg-gray-800 text-indigo-300 py-2 px-4 rounded-lg font-medium text-lg">Git & GitHub</span>
+                        <span class="skill-tag"><i class="fas fa-robot text-purple-400"></i> n8n AI Automation</span>
+                        <span class="skill-tag"><i class="devicon-cloudflare-original text-orange-500"></i> Cloudflare</span>
+                        <span class="skill-tag"><i class="devicon-vercel-original text-white"></i> Vercel</span>
+                        <span class="skill-tag"><i class="devicon-git-plain text-orange-600"></i> Git</span>
+                        <span class="skill-tag"><i class="devicon-github-original text-white"></i> GitHub</span>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Projects Section -->
-        <section id="projects" class="py-20 md:py-32">
+        <section id="projects" class="py-20 md:py-32" data-aos="fade-up">
             <h2 class="text-4xl sm:text-5xl font-bold text-center mb-4 section-heading">Featured Projects</h2>
             <div class="w-24 h-1.5 bg-indigo-600 mx-auto mb-16 rounded-full"></div>
+            
+            <!-- RECOMMENDATION 2: Upgraded Project Cards -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-                <div class="bg-gray-900 rounded-lg overflow-hidden shadow-xl border border-gray-800 hover:border-indigo-500 transition-all duration-300 ease-in-out transform hover:-translate-y-2">
+                
+                <!-- Project Card 1 -->
+                <div class="bg-gray-900 rounded-lg overflow-hidden shadow-xl border border-gray-800 hover:border-indigo-500 transition-all duration-300 ease-in-out transform hover:-translate-y-2" data-aos="fade-up">
                     <img src="DentalVoice.jpg" alt="Screenshot of AI Voice Dental Assistant" class="w-full h-64 object-cover">
-                    <div class="p-6">
+                    <div class="p-6 flex flex-col h-full">
                         <h3 class="text-2xl font-semibold text-white mb-3">AI Voice Dental Assistant</h3>
-                        <p class="text-gray-400 mb-4">A full-stack dental platform with multi-dentist appointment booking and a voice AI agent for instant information.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
+                        <p class="text-gray-400 mb-2"><strong class="text-indigo-300">Problem:</strong> Patients face long wait times for simple dental questions.</p>
+                        <p class="text-gray-400 mb-4"><strong class="text-indigo-300">Solution:</strong> A 24/7 AI Voice Agent for instant answers and smart appointment booking to reduce admin workload.</p>
+                        <div class="flex flex-wrap gap-2 mb-6">
                             <span class="text-sm bg-indigo-900 text-indigo-200 py-1 px-3 rounded-full">Next.js</span>
                             <span class="text-sm bg-indigo-900 text-indigo-200 py-1 px-3 rounded-full">Vapi AI</span>
                             <span class="text-sm bg-indigo-900 text-indigo-200 py-1 px-3 rounded-full">Clerk Auth</span>
                         </div>
+                        <div class="mt-auto flex space-x-4">
+                            <!-- TODO: Replace '#' with your actual live demo URL -->
+                            <a href="ai-dental-voice-agent-xfek.vercel.app/" target="_blank" class="flex-1 text-center bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2 px-4 rounded-lg transition-colors">
+                                Live Demo
+                            </a>
+                            <!-- TODO: Replace '#' with your actual GitHub repo URL -->
+                            <a href="https://github.com/Haseeb-Tariq333/AI-Dental-Voice-Agent" target="_blank" class="flex-1 text-center bg-gray-700 hover:bg-gray-600 text-white font-medium py-2 px-4 rounded-lg transition-colors">
+                                Source Code
+                            </a>
+                        </div>
                     </div>
                 </div>
-                <div class="bg-gray-900 rounded-lg overflow-hidden shadow-xl border border-gray-800 hover:border-indigo-500 transition-all duration-300 ease-in-out transform hover:-translate-y-2">
+
+                <!-- Project Card 2 -->
+                <div class="bg-gray-900 rounded-lg overflow-hidden shadow-xl border border-gray-800 hover:border-indigo-500 transition-all duration-300 ease-in-out transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="200">
                     <img src="KidsStory.jpg" alt="Screenshot of AI-Kids Story Generator" class="w-full h-64 object-cover">
-                    <div class="p-6">
+                    <div class="p-6 flex flex-col h-full">
                         <h3 class="text-2xl font-semibold text-white mb-3">AI-Kids Story Generator</h3>
-                        <p class="text-gray-400 mb-4">Generates children's stories using an AI API in the backend with user authentication and databases to keep track of users.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
+                        <p class="text-gray-400 mb-2"><strong class="text-indigo-300">Problem:</strong> Parents and teachers need engaging, new stories for children but can face creative blocks.</p>
+                        <p class="text-gray-400 mb-4"><strong class="text-indigo-300">Solution:</strong> An AI app to generate unique stories from simple prompts, with user auth to save stories to a database.</p>
+                        <div class="flex flex-wrap gap-2 mb-6">
                             <span class="text-sm bg-indigo-900 text-indigo-200 py-1 px-3 rounded-full">Next.js</span>
                             <span class="text-sm bg-indigo-900 text-indigo-200 py-1 px-3 rounded-full">AI API</span>
                             <span class="text-sm bg-indigo-900 text-indigo-200 py-1 px-3 rounded-full">Clerk Auth</span>
                         </div>
+                        <div class="mt-auto flex space-x-4">
+                            <!-- TODO: Replace '#' with your actual live demo URL -->
+                            <a href="#" target="_blank" class="flex-1 text-center bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2 px-4 rounded-lg transition-colors">
+                                Live Demo
+                            </a>
+                            <!-- TODO: Replace '#' with your actual GitHub repo URL -->
+                            <a href="#" target="_blank" class="flex-1 text-center bg-gray-700 hover:bg-gray-600 text-white font-medium py-2 px-4 rounded-lg transition-colors">
+                                Source Code
+                            </a>
+                        </div>
                     </div>
                 </div>
-                <div class="bg-gray-900 rounded-lg overflow-hidden shadow-xl border border-gray-800 hover:border-indigo-500 transition-all duration-300 ease-in-out transform hover:-translate-y-2">
+
+                <!-- Project Card 3 -->
+                <div class="bg-gray-900 rounded-lg overflow-hidden shadow-xl border border-gray-800 hover:border-indigo-500 transition-all duration-300 ease-in-out transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="400">
                     <img src="https://placehold.co/600x400/101010/FFFFFF?text=AI+CMO" alt="Screenshot of AI CMO" class="w-full h-64 object-cover">
-                    <div class="p-6">
+                    <div class="p-6 flex flex-col h-full">
                         <h3 class="text-2xl font-semibold text-white mb-3">AI CMO</h3>
-                        <p class="text-gray-400 mb-4">An AI-powered SaaS platform that automates brandkit generation, web scraping, and blog post generation for brands.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
+                        <p class="text-gray-400 mb-2"><strong class="text-indigo-300">Problem:</strong> Businesses struggle to create consistent brand identities and marketing content.</p>
+                        <p class="text-gray-400 mb-4"><strong class="text-indigo-300">Solution:</strong> A SaaS platform that automates brandkit creation, scrapes web data, and generates on-brand blog posts.</p>
+                        <div class="flex flex-wrap gap-2 mb-6">
                             <span class="text-sm bg-indigo-900 text-indigo-200 py-1 px-3 rounded-full">Next.js</span>
                             <span class="text-sm bg-indigo-900 text-indigo-200 py-1 px-3 rounded-full">Cloudflare D1</span>
                             <span class="text-sm bg-indigo-900 text-indigo-200 py-1 px-3 rounded-full">Web Scraping</span>
                         </div>
+                        <div class="mt-auto flex space-x-4">
+                            <!-- TODO: Replace '#' with your actual live demo URL -->
+                            <a href="#" target="_blank" class="flex-1 text-center bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2 px-4 rounded-lg transition-colors">
+                                Live Demo
+                            </a>
+                            <!-- TODO: Replace '#' with your actual GitHub repo URL -->
+                            <a href="#" target="_blank" class="flex-1 text-center bg-gray-700 hover:bg-gray-600 text-white font-medium py-2 px-4 rounded-lg transition-colors">
+                                Source Code
+                            </a>
+                        </div>
                     </div>
                 </div>
+
             </div>
         </section>
 
         <!-- Contact Section -->
-        <section id="contact" class="py-20 md:py-32">
+        <section id="contact" class="py-20 md:py-32" data-aos="fade-up">
             <h2 class="text-4xl sm:text-5xl font-bold text-center mb-4 section-heading">Get In Touch</h2>
             <div class="w-24 h-1.5 bg-indigo-600 mx-auto mb-16 rounded-full"></div>
             
@@ -299,9 +406,31 @@
         </div>
     </footer>
 
-    <!-- JavaScript for smooth scrolling and contact form -->
+    <!-- 
+      JavaScript for Libraries 
+    -->
+    
+    <!-- AOS (Animate On Scroll) JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <script>
-        // Smooth Scrolling
+        // --- AOS Initialization ---
+        AOS.init({
+            duration: 700, // Animation duration
+            once: true,     // Whether animation should happen only once
+            easing: 'ease-out-quad',
+        });
+
+        // --- Typed.js Initialization ---
+        new Typed('#typed-text', {
+            strings: ['SaaS Platforms.', 'AI Automations.', 'Web Applications.'],
+            typeSpeed: 70,
+            backSpeed: 40,
+            loop: true,
+            backDelay: 2000,
+        });
+
+        // --- Smooth Scrolling ---
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -319,9 +448,9 @@
             });
         });
 
-        // EmailJS Contact Form
+        // --- EmailJS Contact Form ---
         (function() {
-            // IMPORTANT: Replace with your own EmailJS Public Key
+            // TODO: Replace with your own EmailJS Public Key
             emailjs.init({
               publicKey: "J6Af2-gFjKNUcrta4", 
             });
@@ -334,25 +463,21 @@
             const submitButton = document.getElementById('submit-button');
             const formMessage = document.getElementById('form-message');
 
-            // Change button text and disable it
             submitButton.disabled = true;
             submitButton.textContent = 'Sending...';
 
-            // --- IMPORTANT ---
-            // Replace 'YOUR_SERVICE_ID' and 'YOUR_TEMPLATE_ID' with your EmailJS IDs
+            // TODO: Replace 'YOUR_SERVICE_ID' and 'YOUR_TEMPLATE_ID'
             const serviceID = 'service_3ehdcn6';
             const templateID = 'template_mrwomjr';
 
             emailjs.sendForm(serviceID, templateID, form)
                 .then(() => {
-                    // Success
                     formMessage.textContent = 'Message sent successfully!';
                     formMessage.className = 'text-green-400';
                     submitButton.disabled = false;
                     submitButton.textContent = 'Send Message';
-                    form.reset(); // Clear the form
+                    form.reset();
                 }, (err) => {
-                    // Error
                     console.error('EmailJS Error:', err);
                     formMessage.textContent = 'Failed to send message. Please try again.';
                     formMessage.className = 'text-red-400';
@@ -363,5 +488,5 @@
     </script>
 
 </body>
-
 </html>
+
